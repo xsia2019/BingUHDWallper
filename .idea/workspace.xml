@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f8f9235-0a12-4bfb-900c-0e73e0c50b20" name="Changes" comment="修改文件路径">
-      <change afterPath="$PROJECT_DIR$/.idea/BingUHDWallper.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/_2022_4_2_10_22___Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2022_4_2_10_22_取消提交了变更_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingUHD.py" beforeDir="false" afterPath="$PROJECT_DIR$/bingUHD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
+    <list default="true" id="3f8f9235-0a12-4bfb-900c-0e73e0c50b20" name="Changes" comment="修改名称">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/bingHUD_sh.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/bingHUD_sh.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1644894393556</updated>
       <workItem from="1648865901665" duration="402000" />
-      <workItem from="1648866340328" duration="12954000" />
+      <workItem from="1648866340328" duration="13114000" />
     </task>
     <task id="LOCAL-00001" summary="# 用于下载Bing每日壁纸到本机指定位置&#10;# 已修改默认分辨率（1920x1080）为UHD&#10;# 可以结合Windows的任务计划每天定时下载">
       <created>1644909497075</created>
@@ -209,7 +200,28 @@
       <option name="project" value="LOCAL" />
       <updated>1648885019217</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="修改文件路径">
+      <created>1648885550016</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1648885550016</updated>
+    </task>
+    <task id="LOCAL-00016" summary="修改文件路径">
+      <created>1648885560953</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1648885560953</updated>
+    </task>
+    <task id="LOCAL-00017" summary="修改名称">
+      <created>1648885609205</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1648885609205</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +272,8 @@
     <MESSAGE value="修正错误" />
     <MESSAGE value="添加start.sh" />
     <MESSAGE value="修改文件路径" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改文件路径" />
+    <MESSAGE value="修改名称" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改名称" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BingUHDWallper$bingUHD.coverage" NAME="bingUHD 覆盖结果" MODIFIED="1648884908745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

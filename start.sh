@@ -10,5 +10,6 @@ git diff
 git config --global user.email "kinofgl@gmail.com"
 git config --global user.name "kinofgl"
 git add .
+git add BingWHDWallpaper/
 git commit -m "$now"
 git push -u origin master

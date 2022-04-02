@@ -31,5 +31,16 @@ jobs:
       - name: Run mission
         run: |
           python bingUHD.py
-          
-          
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v1.5.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.secret_github_token }}
+          COMMIT_MESSAGE: Add build artifact
+          PULL_REQUEST_TITLE: Add build artifact
+
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: $\{{ secrets.secret_github_token }}
+          branch: main

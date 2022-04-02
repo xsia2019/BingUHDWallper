@@ -11,7 +11,7 @@ class BingUHD(object):
     def __init__(self):
         # 默认bing图片查询地址
         self.url = 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=ZH-CN'
-        self.path = './BingUHDWallpaper/'
+        self.path = './BingUHD/'
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                           'Chrome/80.0.3987.132 Safari/537.36'

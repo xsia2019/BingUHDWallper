@@ -90,7 +90,7 @@ class BingUHD(object):
             name = info[2] + '.' + info[3] + '.' + copy_right + '.md'
             full_name = file_path + name
 
-            return name
+            return full_name
         except Exception as e:
             print('错误: 无法获取到图片信息，请检查网络连接' + '\n')
 

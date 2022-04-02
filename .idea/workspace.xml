@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f8f9235-0a12-4bfb-900c-0e73e0c50b20" name="Changes" comment="把文件放在根目录下">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
-    </list>
+    <list default="true" id="3f8f9235-0a12-4bfb-900c-0e73e0c50b20" name="Changes" comment="把文件放在根目录下" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1644894393556</updated>
       <workItem from="1648865901665" duration="402000" />
-      <workItem from="1648866340328" duration="13789000" />
+      <workItem from="1648866340328" duration="14221000" />
     </task>
     <task id="LOCAL-00001" summary="# 用于下载Bing每日壁纸到本机指定位置&#10;# 已修改默认分辨率（1920x1080）为UHD&#10;# 可以结合Windows的任务计划每天定时下载">
       <created>1644909497075</created>
@@ -236,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648885941165</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="把文件放在根目录下">
+      <created>1648886391106</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1648886391106</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

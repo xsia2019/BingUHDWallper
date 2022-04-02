@@ -7,6 +7,7 @@ import os
 import requests
 import re
 
+
 # bing图片地址
 img_url = 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=ZH-CN'
 

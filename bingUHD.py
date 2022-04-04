@@ -19,6 +19,7 @@ class BingUHD(object):
         }
         self.resolution = 'UHD'
 
+    # 取得图片相关信息
     def get_img_info(self):
         try:
             # 获取图片信息

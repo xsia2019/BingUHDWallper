@@ -24,14 +24,12 @@ class BingUHD(object):
         try:
             # 获取图片信息
             result = requests.get(self.url, headers=self.headers).json()
-
             # 提取图片地址
             raw_img_url = 'https://cn.bing.com' + result['images'][0]['url']
             # 得到默认图片链接
             normal_img_url = raw_img_url[0:raw_img_url.find(".jpg") + 4]
             # 得到UHD图片链接替换默认的 1080 图片为UHD图片链接
             uhd_img_url = normal_img_url.replace("1920x1080", self.resolution)
-
             # 提取中文标题和版权信息
             date = result["images"][0]["startdate"]
             title = result["images"][0]["title"]
@@ -58,7 +56,11 @@ class BingUHD(object):
             # 图片分辨率文字
             normal = self.get_pic_size()[0]
             uhd = self.get_pic_size()[1]
-
+            # 引用
+            # preference = '[//]: # (download links)' + '\n\n'
+            pref_normal = '[' + normal + '](' + normal_url + ')'
+            pref_uhd = '[' + uhd + '](' + uhd_url + ')'
+            # 编辑正文内容
             # 标题
             title_md = '### ' + title + '\n\n'
             # 日期
@@ -66,16 +68,11 @@ class BingUHD(object):
             # 说明
             description_md = copy_right + '\n\n'
             # 下载链接
-            download_url = '**下载**  |  [' + normal + ']  |  [' + uhd + ']' + '\n\n'
+            download_url = '**下载**  |  ' + pref_normal + '  |  ' + pref_uhd + '\n\n'
             # 图片缓存
             img_cache = '![' + title + '](' + normal_url + ' "' + copy_right + '"' + ')' + '\n\n'
-            # 引用
-            preference = '[//]: # (download links)' + '\n\n'
-            pref_normal = '[' + normal + ']: <' + normal_url + '>' + '\n\n'
-            pref_uhd = '[' + uhd + ']: <' + uhd_url + '>' + '\n\n'
-
-            content_md = title_md + date_md + description_md + download_url + img_cache + preference + pref_normal + pref_uhd
-
+            # 组合正文信息
+            content_md = title_md + date_md + description_md + download_url + img_cache
             return content_md
 
         except Exception as e:

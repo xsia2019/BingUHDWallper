@@ -4,6 +4,8 @@
 
 import os
 import requests
+from io import BytesIO
+from PIL import Image
 
 
 class BingUHD(object):
@@ -50,8 +52,12 @@ class BingUHD(object):
             copy_right= info[4]
 
             # 图片分辨率文字
-            normal = normal_url[(normal_url.rfind("_") + 1): -4]
-            uhd = uhd_url[(uhd_url.rfind("_") + 1): -4]
+            # normal = normal_url[(normal_url.rfind("_") + 1): -4]
+            # uhd = uhd_url[(uhd_url.rfind("_") + 1): -4]
+
+            # 图片分辨率文字
+            normal = self.get_pic_size()[0]
+            uhd = self.get_pic_size()[1]
 
             # 标题
             title_md = '### ' + title + '\n\n'
@@ -60,7 +66,7 @@ class BingUHD(object):
             # 说明
             description_md = copy_right + '\n\n'
             # 下载链接
-            download_url = '**下载**  |  [1920x1080]  |  [UHD]' + '\n\n'
+            download_url = '**下载**  |  [' + normal + ']  |  [' + uhd + ']' + '\n\n'
             # 图片缓存
             img_cache = '![' + title + '](' + normal_url + ' "' + copy_right + '"' + ')' + '\n\n'
             # 引用
@@ -94,6 +100,21 @@ class BingUHD(object):
         except Exception as e:
             print('错误: 无法获取到图片信息，请检查网络连接' + '\n')
 
+    # 取得图片的尺寸
+    def get_pic_size(self):
+        """
+        获取远程图片的尺寸
+        :param url:
+        :return:
+        """
+        size_list = []
+        url = [self.get_img_info()[0], self.get_img_info()[1]]
+        for u in url:
+            r = requests.get(u)
+            img = Image.open(BytesIO(r.content))
+            pic_size = str(img.width) + 'x' + str(img.height)
+            size_list.append(pic_size)
+        return size_list
 
 if __name__ == "__main__":
     bing = BingUHD()

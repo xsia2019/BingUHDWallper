@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f8f9235-0a12-4bfb-900c-0e73e0c50b20" name="Changes" comment="调整了正文内容排版">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bingUHD.py" beforeDir="false" afterPath="$PROJECT_DIR$/bingUHD.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -325,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649074619563</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="调整了正文内容排版">
+      <created>1649074943703</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1649074943703</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

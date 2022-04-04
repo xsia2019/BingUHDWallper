@@ -40,6 +40,7 @@ class BingUHD(object):
         except Exception as e:
             print('错误: 无法获取到图片地址，请检查网络连接' + '\n')
 
+    # 得到今日图片信息并清洗
     def get_today_img(self):
         try:
             info = self.get_img_info()

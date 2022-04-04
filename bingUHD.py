@@ -79,6 +79,7 @@ class BingUHD(object):
         except Exception as e:
             print('错误: 无法获取到图片信息，请检查网络连接' + '\n')
 
+    # 取得文件名称
     def get_file_name(self):
         try:
             info = self.get_img_info()
@@ -113,6 +114,7 @@ class BingUHD(object):
             pic_size = str(img.width) + 'x' + str(img.height)
             size_list.append(pic_size)
         return size_list
+
 
 if __name__ == "__main__":
     bing = BingUHD()

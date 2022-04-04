@@ -1,6 +1,5 @@
 # 下载并存储Bing每日壁纸到指定位置
-# 修改于 2022-04-02
-# 作者：kinofgl@gmail.com
+
 
 import os
 import requests

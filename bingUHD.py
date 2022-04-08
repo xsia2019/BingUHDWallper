@@ -2,6 +2,7 @@
 
 
 import os
+import re
 import requests
 from io import BytesIO
 from PIL import Image
@@ -61,6 +62,9 @@ class BingUHD(object):
             # preference = '[//]: # (download links)' + '\n\n'
             pref_normal = '[' + normal + '](' + normal_url + ')'
             pref_uhd = '[' + uhd + '](' + uhd_url + ')'
+            # 今日美图文字说明
+            description = self.get_description() + '\n'
+
             # 编辑正文内容
             # 标题
             title_md = '### ' + title + '\n\n'
@@ -73,7 +77,7 @@ class BingUHD(object):
             # 图片缓存
             img_cache = '![' + title + '](' + normal_url + ' "' + copy_right + '"' + ')' + '\n\n'
             # 组合正文信息
-            content_md = title_md + date_md + description_md + download_url + img_cache
+            content_md = title_md + date_md + description_md + download_url + img_cache + description
             return content_md
 
         except Exception as e:
@@ -115,6 +119,14 @@ class BingUHD(object):
             size_list.append(pic_size)
         return size_list
 
+    # 取得今日美图文字
+    def get_description(self):
+        url = 'https://www.bing.com/?mkt=zh-CN'
+        rsp = requests.get(url)
+        result = re.search('Description(.*?)Image', rsp.text).group()
+        result = re.search(':"(.*?)",', result).group()[2:-2]
+        return result
+
 
 if __name__ == "__main__":
     bing = BingUHD()
@@ -124,3 +136,9 @@ if __name__ == "__main__":
         content = bing.get_today_img()
         f.write(content)
         f.close()
+
+
+
+
+
+

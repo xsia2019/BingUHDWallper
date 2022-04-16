@@ -107,7 +107,6 @@ class BingUHD(object):
     def get_pic_size(self):
         """
         获取远程图片的尺寸
-        :param url:
         :return:
         """
         size_list = []
@@ -123,8 +122,7 @@ class BingUHD(object):
     def get_description(self):
         url = 'https://www.bing.com/?mkt=zh-CN'
         rsp = requests.get(url)
-        result = re.search('Description(.*?)Image', rsp.text).group()
-        result = re.search(':"(.*?)",', result).group()[2:-2]
+        result = re.search(r'({"Description":")(.*?)(","Image")', rsp.text).group(2)
         return result
 
 

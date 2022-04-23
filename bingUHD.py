@@ -129,14 +129,8 @@ class BingUHD(object):
 if __name__ == "__main__":
     bing = BingUHD()
     file_name = bing.get_file_name()
+    content = bing.get_today_img()
 
     with open(file_name, 'w') as f:
-        content = bing.get_today_img()
         f.write(content)
         f.close()
-
-
-
-
-
-

@@ -2,6 +2,9 @@
 用于下载必应Bing每日壁纸的脚本。
 
 ## 说明
+
+BingUHD按月保存历史记录。
+
 bingUDH.py 用于下载必应Bing每日壁纸信息，保存成md文件，保存在BingUHD目录下(按月份)。
 
 bingUHD_PC 用于Windows系统下载必应Bing每日壁纸。可结合任务计划定期执行下载。

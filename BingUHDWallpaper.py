@@ -2,17 +2,19 @@
 # 需要修改自定义目录 img_path
 # 修改于 2022-02-15
 # 作者：kinofgl@gmail.com
+# 修改 img_path,
 
 import os
 import requests
 import re
 
 
+# 存放在本地电脑的地址，目录必须存在
+# img_path = r'C:\Users\Michael\OneDrive\图片\Desktop\BingUHD'
+img_path = r'/mnt/c/Users/Michael/OneDrive/图片/Desktop/BingUHD'
+
 # bing图片地址
 img_url = 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=ZH-CN'
-
-# 存放在本地电脑的地址，目录必须存在
-img_path = r'C:\Users\Michael\OneDrive\图片\Desktop\BingUHD'
 
 try:
     # 得到bing图片信息

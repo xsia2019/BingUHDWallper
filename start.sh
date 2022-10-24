@@ -1,4 +1,4 @@
-python3 ./bingUHD.py
+python3 ./bingUHD_Action.py
 
 time=$(date "+%Y.%m.%d %H:%M:%S")
 

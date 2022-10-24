@@ -63,7 +63,8 @@ class BingUHD(object):
             pref_normal = '[' + normal + '](' + normal_url + ')'
             pref_uhd = '[' + uhd + '](' + uhd_url + ')'
             # 今日美图文字说明
-            description = self.get_description() + '\n'
+            # 2022.10.24 Bing已经取消文字说明
+            # description = self.get_description() + '\n'
 
             # 编辑正文内容
             # 标题
@@ -71,13 +72,13 @@ class BingUHD(object):
             # 日期
             date_md = '日期：' + date[0:4] + '-' + date[4:6] + '-' + date[6:8] + '\n\n'
             # 说明
-            description_md = copy_right + '\n\n'
+            # description_md = copy_right + '\n\n'
             # 下载链接
             download_url = '**下载**  |  ' + pref_normal + '  |  ' + pref_uhd + '\n\n'
             # 图片缓存
             img_cache = '![' + title + '](' + normal_url + ' "' + copy_right + '"' + ')' + '\n\n'
             # 组合正文信息
-            content_md = title_md + date_md + description_md + download_url + img_cache + description
+            content_md = title_md + date_md + download_url + img_cache
             return content_md
 
         except Exception as e:
@@ -131,6 +132,6 @@ if __name__ == "__main__":
     file_name = bing.get_file_name()
     content = bing.get_today_img()
 
-    with open(file_name, 'w') as f:
+    with open(file_name, 'w', encoding='utf-8') as f:
         f.write(content)
         f.close()
